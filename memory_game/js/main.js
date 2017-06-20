@@ -23,7 +23,6 @@ var cards = [
 
 var cardsInPlay = [];
 var gameBoard = document.getElementById('game-board');
-var resetButtonClicked = document.getElementById('reset');
 
 // Create a function to check for a match
 var checkForMatch = function() {
@@ -64,12 +63,3 @@ var createBoard = function() {
 }
 
 createBoard();
-
-var resetButton = resetButtonClicked;
-resetButton.addEventListener('click', resetBoard);
-
-var resetBoard = function () {
-	gameBoard.refresh();
-  cardsInPlay = [];
-	createBoard();
-}
